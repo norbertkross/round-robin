@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import Logo from "../../assets/EUgene@2x.png"
-import Zenly from "../../assets/zenly.svg"
-import VideoCall from "../../assets/video_call.svg"
-import TodoList from "../../assets/todo_list.svg"
-import Pencil from "../../assets/pencil.svg"
-import InvertColors from "../../assets/invert_colors.svg"
-import January from "../../assets/january.svg"
-import Home from "../../assets/home.svg"
-import ChampagneBottle from "../../assets/champagne_bottle.svg"
+import Logo from "../../../assets/EUgene@2x.png"
+import Zenly from "../../../assets/zenly.svg"
+import VideoCall from "../../../assets/video_call.svg"
+import TodoList from "../../../assets/todo_list.svg"
+import Pencil from "../../../assets/pencil.svg"
+import InvertColors from "../../../assets/invert_colors.svg"
+import January from "../../../assets/january.svg"
+import Home from "../../../assets/home.svg"
+import ChampagneBottle from "../../../assets/champagne_bottle.svg"
 
 // var IllustrationSize = 150;
 
