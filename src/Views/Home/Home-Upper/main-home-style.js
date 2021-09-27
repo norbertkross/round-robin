@@ -36,7 +36,8 @@ export const MiddleContaner = styled.div`
 export const TopHeader = styled.div`
     display: flex;
     flex-direction: row; 
-    justify-content: end;
+    /* justify-content: end; */
+    justify-content: space-between;
     height:35px;
     /* background-color: teal; */
     padding-right: 10px;
