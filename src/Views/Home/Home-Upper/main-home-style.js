@@ -4,13 +4,18 @@ import Zenly from "../../../assets/zenly.svg"
 import VideoCall from "../../../assets/video_call.svg"
 import TodoList from "../../../assets/todo_list.svg"
 import Pencil from "../../../assets/pencil.svg"
-import InvertColors from "../../../assets/invert_colors.svg"
+// import InvertColors from "../../../assets/invert_colors.svg"
+import light_automation from "../../../assets/light_automation.svg"
 import January from "../../../assets/january.svg"
 import Home from "../../../assets/home.svg"
 import ChampagneBottle from "../../../assets/champagne_bottle.svg"
 
-// var IllustrationSize = 150;
+var IllustrationSize = 150;
+var IllustrationSizeAnimated = IllustrationSize.toString() + "px";
+var IllustrationSizeNormal = (IllustrationSize - 15).toString() +"px";
 
+// Zoom For Small Screens
+ var smallZoom = "17vw";
 export const BaseContainer = styled.div`
     width: 100vw;
     min-height: 100vh;
@@ -49,7 +54,11 @@ export const NavItem = styled.div`
     margin-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
-    /* background-color: green; */
+    transition: 500ms;
+    :hover{
+        height: 40px;
+        width: 40px;
+      }    
     background-image: url('${Pencil}');
     background-repeat: no-repeat;
     background-size: contain;
@@ -67,8 +76,13 @@ export const NavItem2 = styled.div`
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 5px;
-    /* background-color: green; */
-    background-image: url('${InvertColors}');
+    transition: 500ms;
+    :hover{
+        height: 40px;
+        width: 40px;
+      }  
+         
+    background-image: url('${light_automation}');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -105,15 +119,28 @@ export const CenterLogo = styled.div`
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;  
-
+    transition: 500ms;
+    :hover{
+        height: 100px;
+        width: 220px;
+      }     
     @media all and (max-width:500px) {
         height: 80px;
         width:  100px;
+
+        :hover{
+        height: 100px;
+        width: 120px;
+      }         
     }
     
     @media all and (min-width:1700px) {
         height: 300px;
         width:  400px;
+        :hover{
+        height: 320px;
+        width: 420px;
+      }         
     }
 
     height: 130px;
@@ -135,17 +162,28 @@ export const GroupItem1 = styled.div`
     position: absolute;
     top: 1vh;
     left: 30vw;
-    height: 150px;
-    width: 150px;
+    height: ${IllustrationSizeNormal};
+    width: ${IllustrationSizeNormal};
     background-image: url('${Home}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
+    transition: 500ms;
+
+    :hover{
+        height: ${IllustrationSizeAnimated};
+        width: ${IllustrationSizeAnimated};
+    }
     /* background-color: rebeccapurple; */
     @media all and (max-width:900px){
         /* background-color: green; */
         height: 16vw;
         width: 16vw; 
+
+        :hover{
+        height: ${smallZoom};
+        width: ${smallZoom};
+      }         
     }
 
     @media all and (max-width:650px) {
@@ -153,23 +191,35 @@ export const GroupItem1 = styled.div`
         left: 30vw;
     }
 
+
+
 `;
 
 export const GroupItem2 = styled.div`
     position: absolute;
     top: 1vh;
     left: 70vw;
-    height: 150px;
-    width: 150px;
+    height: ${IllustrationSizeNormal};
+    width: ${IllustrationSizeNormal};
     background-image: url('${VideoCall}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;     
+    transition: 500ms;
+
+    :hover{
+        height: ${IllustrationSizeAnimated};
+        width: ${IllustrationSizeAnimated};
+    }    
     /* background-color: rebeccapurple; */
     @media all and (max-width:900px){
         /* background-color: green; */
         height: 16vw;
         width: 16vw; 
+        :hover{
+        height: ${smallZoom};
+        width: ${smallZoom};
+      }         
     }
 
     @media all and (max-width:650px) {
@@ -183,17 +233,27 @@ export const GroupItem3 = styled.div`
     position: absolute;
     top: 40vh;
     left: 7vw;
-    height: 150px;
-    width: 150px;
+    height: ${IllustrationSizeNormal};
+    width: ${IllustrationSizeNormal};
     background-image: url('${TodoList}');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;     
+    background-repeat: no-repeat; 
+    transition: 500ms;
+
+    :hover{
+        height: ${IllustrationSizeAnimated};
+        width: ${IllustrationSizeAnimated};
+    }        
     /* background-color: rebeccapurple; */
     @media all and (max-width:900px){
         /* background-color: green; */
         height: 16vw;
         width: 16vw; 
+        :hover{
+        height: ${smallZoom};
+        width: ${smallZoom};
+      }         
     }
 
     @media all and (max-width:650px) {
@@ -208,16 +268,26 @@ export const GroupItem4 = styled.div`
     position: absolute;
     top: 45vh;
     right:-95vw;
-    height: 150px;
-    width: 150px;
+    height: ${IllustrationSizeNormal};
+    width: ${IllustrationSizeNormal};
     background-image: url('${Zenly}');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;     
+    background-repeat: no-repeat;  
+    transition: 500ms;
+
+    :hover{
+        height: ${IllustrationSizeAnimated};
+        width: ${IllustrationSizeAnimated};
+    }       
     /* background-color: rebeccapurple; */
     @media all and (max-width:900px){
         height: 16vw;
         width: 16vw; 
+        :hover{
+        height: ${smallZoom};
+        width: ${smallZoom};
+      }         
     }
 
     @media all and (max-width:650px) {
@@ -231,17 +301,28 @@ export const GroupItem5 = styled.div`
     position: absolute;
     bottom: -93vh;
     right:-70vw;
-    height: 150px;
-    width: 150px;
+    height: ${IllustrationSizeNormal};
+    width: ${IllustrationSizeNormal};
     background-image: url('${January}');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;     
+    background-repeat: no-repeat;   
+    transition: 500ms;
+
+    :hover{
+        height: ${IllustrationSizeAnimated};
+        width: ${IllustrationSizeAnimated};
+    }      
     /* background-color: rebeccapurple; */
     @media all and (max-width:900px){
         /* background-color: green; */
         height: 16vw;
         width: 16vw; 
+
+       :hover{
+        height: ${smallZoom};
+        width: ${smallZoom};
+      } 
     }
 
     @media all and (max-width:650px) {
@@ -257,17 +338,27 @@ export const GroupItem6 = styled.div`
     position: absolute;
     bottom: -93vh;
     left: 20vw;
-    height: 150px;
-    width: 150px;
+    height: ${IllustrationSizeNormal};
+    width: ${IllustrationSizeNormal};
     background-image: url('${ChampagneBottle}');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;     
+    background-repeat: no-repeat;   
+    transition: 500ms;
+
+    :hover{
+        height: ${IllustrationSizeAnimated};
+        width: ${IllustrationSizeAnimated};
+    }      
     /* background-color: rebeccapurple; */
     @media all and (max-width:900px){
         /* background-color: green; */
         height: 16vw;
         width: 16vw; 
+        :hover{
+        height: ${smallZoom};
+        width: ${smallZoom};
+      }         
     } 
     
     @media all and (max-width:650px) {
