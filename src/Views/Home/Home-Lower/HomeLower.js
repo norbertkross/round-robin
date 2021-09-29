@@ -10,7 +10,6 @@ function HomeLower() {
     useEffect(()=>{
 
         function setMediaSized(){
-            console.log("Event Triggering");
             setSize({height:window.innerHeight,width:window.innerWidth})            
         }
         
@@ -62,7 +61,7 @@ function HomeLower() {
     ];
 
     var items = cardItems.map((item, index) => {
-        return <CarouselChildInner>
+        return <CarouselChildInner key={index}>
             <CardBodyItemTop>
                 <CardBodyItemTopQuote></CardBodyItemTopQuote>
                 <CardBodyItemTopName>{item['name']}</CardBodyItemTopName>
@@ -75,14 +74,14 @@ function HomeLower() {
     });
 
     var bottomNav = bottomNavigationItems.map((mainItem,index)=>{
-        return <BottomItemsDiv>
+        return <BottomItemsDiv key={index}>
                 <BottomItemsHeader>
                 {mainItem['heading']}
                 </BottomItemsHeader>
 
             {/* body of this index item */}            
             {mainItem['content_items'].map((item,index)=>{
-                return <BottomItemsSubText>
+                return <BottomItemsSubText key={index}>
                             {item}
                 </BottomItemsSubText>
             })}
@@ -112,10 +111,10 @@ function HomeLower() {
             <BasePadding/>
             <BottomLayer>
                 <BottomLogosContainer>
-                    <BottomLogo url={Github}/>
-                    <BottomLogo url={Twitter}/>
-                    <BottomLogo url={Youtube}/>
-                    <BottomLogo url={LinkedIn}/>
+                    <BottomLogo url={Github} key={"Github"}/>
+                    <BottomLogo url={Twitter} key={"Twitter"}/>
+                    <BottomLogo url={Youtube} key={"Youtube"}/>
+                    <BottomLogo url={LinkedIn} key={"LinkedIn"}/>
                 </BottomLogosContainer> 
 
                 {size.width>500?<ArrowUpIcon/>: <div/>}               

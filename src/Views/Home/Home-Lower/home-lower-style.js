@@ -257,7 +257,8 @@ export const BottomLogo = styled.div`
 :hover{
     height: 80px;
     width: 80px;
-}   
+} 
+  
 `;
 
 

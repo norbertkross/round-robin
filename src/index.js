@@ -2,10 +2,44 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore,applyMiddleware,compose}  from 'redux'
+import { Provider } from 'react-redux';
+import allReducer from './state/reducers/combined-reducers';
+import {createBrowserHistory} from 'history'
+import { ConnectedRouter, routerMiddleware } from 'connected-react-router'
+
+import AllRoutes from './Components/Handle-Routes/allroutes';
+
+
+// STORE
+// ACTION
+// REDUCER
+// DISPACT
+
+export const history = createBrowserHistory()
+
+/// STORE
+//  const store = createStore(appReducer)
+ const appstore = createStore(
+   allReducer(history),  
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    compose(
+      applyMiddleware(
+        routerMiddleware(history), // for dispatching history actions
+        // ... other middlewares ...
+      ),
+    ),
+    )
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     
+      <Provider store={appstore}>
+        <ConnectedRouter history={history}> 
+          <AllRoutes/>
+        </ConnectedRouter>
+      </Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
