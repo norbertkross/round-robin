@@ -1,12 +1,20 @@
 import { ArrowUpContainer, ArrowUpIcon, BasePadding, BottomContainer, BottomItemsDiv, BottomItemsHeader, BottomItemsSubText, BottomLayer, BottomLogo, BottomLogosContainer, CardBodyItemTop, CardBodyItemTopImage, CardBodyItemTopName, CardBodyItemTopQuote, CardContent, CarouselChild, CarouselChildInner, CarouselContainer, GapBetween, HomeLoweBody, PaddingAfterCardContent, ParticlesContainer, SpaceBeforeBottom } from "./home-lower-style";
 import Github from "../../../assets/github.svg"
+import Github_Dark from "../../../assets/assets-dark/github.svg"
 import Twitter from "../../../assets/twitter.svg"
+import Twitter_Dark from "../../../assets/assets-dark/twitter.svg"
 import Youtube from "../../../assets/play_button.svg"
+import Youtube_Dark from "../../../assets/assets-dark/play_button.svg"
 import LinkedIn from "../../../assets/linkedin.svg"
+import LinkedIn_Dark from "../../../assets/assets-dark/linkedin.svg"
 import { useEffect, useState } from "react";
+import {useSelector} from 'react-redux'
+
 
 function HomeLower() {
     const [size,setSize] = useState({height:0.0,width:0.0})
+    const themeState = useSelector(state=>state.appReducer)
+
     useEffect(()=>{
 
         function setMediaSized(){
@@ -111,10 +119,10 @@ function HomeLower() {
             <BasePadding/>
             <BottomLayer>
                 <BottomLogosContainer>
-                    <BottomLogo url={Github} key={"Github"}/>
-                    <BottomLogo url={Twitter} key={"Twitter"}/>
-                    <BottomLogo url={Youtube} key={"Youtube"}/>
-                    <BottomLogo url={LinkedIn} key={"LinkedIn"}/>
+                    <BottomLogo url={themeState.isdark === false?Github:Github_Dark} key={"Github"}/>
+                    <BottomLogo url={themeState.isdark === false?Twitter:Twitter_Dark} key={"Twitter"}/>
+                    <BottomLogo url={themeState.isdark === false?Youtube:Youtube_Dark} key={"Youtube"}/>
+                    <BottomLogo url={themeState.isdark === false?LinkedIn:LinkedIn_Dark} key={"LinkedIn"}/>
                 </BottomLogosContainer> 
 
                 {size.width>500?<ArrowUpIcon/>: <div/>}               

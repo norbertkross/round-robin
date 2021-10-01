@@ -5,8 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import MainHome from "./Views/Home//Home-Upper/MainHome";
 import HomeLower from "./Views/Home/Home-Lower/HomeLower";
 import { useSelector } from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from "react-router";
-
 
 
 function App() {

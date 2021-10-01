@@ -1,12 +1,12 @@
 import {useState,useEffect} from "react"
-import { useSelector,useDispatch } from "react-redux";
+import { /*useSelector*/useDispatch } from "react-redux";
 import { changeTheme } from "../../../state/actions/state-actions";
 import { BaseContainer, CenterLogo, GroupItem1, GroupItem2, GroupItem3, GroupItem4, GroupItem5, GroupItem6, HoldRoundItems, HomeBodyTop, MiddleContaner, NavItem, NavItem2, TopHeader } from "../Home-Upper/main-home-style";
 
 
 function MainHome() {
 
-    const themeState = useSelector(state=>state.appReducer)
+    // const themeState = useSelector(state=>state.appReducer)
     const dispatch = useDispatch()
 
     const [size,setSize] = useState({height:0.0,width:0.0})

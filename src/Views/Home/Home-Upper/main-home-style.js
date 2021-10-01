@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import Logo from "../../../assets/EUgene@2x.png"
 import Zenly from "../../../assets/zenly.svg"
+import Zenly_Dark from "../../../assets/assets-dark/zenly.svg"
 import VideoCall from "../../../assets/video_call.svg"
+import VideoCall_Dark from "../../../assets/assets-dark/video_call.svg"
 import TodoList from "../../../assets/todo_list.svg"
+import TodoList_Dark from "../../../assets/assets-dark/todo_list.svg"
 import Pencil from "../../../assets/pencil.svg"
-// import InvertColors from "../../../assets/invert_colors.svg"
+import Pencil_Dark from "../../../assets/assets-dark/pencil.svg"
 import light_automation from "../../../assets/light_automation.svg"
+import light_automation_Dark from "../../../assets/assets-dark/light_automation.svg"
 import January from "../../../assets/january.svg"
+import January_Dark from "../../../assets/assets-dark/january.svg"
 import Home from "../../../assets/home.svg"
+import Home_Dark from "../../../assets/assets-dark/home.svg"
 import ChampagneBottle from "../../../assets/champagne_bottle.svg"
+import ChampagneBottle_Dark from "../../../assets/assets-dark/champagne_bottle.svg"
 
 var IllustrationSize = 150;
 var IllustrationSizeAnimated = IllustrationSize.toString() + "px";
@@ -55,11 +62,12 @@ export const NavItem = styled.div`
     margin-left: 10px;
     margin-right: 10px;
     transition: 500ms;
+    cursor: pointer;
     :hover{
         height: 40px;
         width: 40px;
       }    
-    background-image: url('${Pencil}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?Pencil:Pencil_Dark}');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -77,12 +85,13 @@ export const NavItem2 = styled.div`
     margin-right: 10px;
     margin-top: 5px;
     transition: 500ms;
+    cursor: pointer;
     :hover{
         height: 40px;
         width: 40px;
       }  
          
-    background-image: url('${light_automation}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?light_automation:light_automation_Dark}');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -164,11 +173,12 @@ export const GroupItem1 = styled.div`
     left: 30vw;
     height: ${IllustrationSizeNormal};
     width: ${IllustrationSizeNormal};
-    background-image: url('${Home}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?Home:Home_Dark}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
     transition: 500ms;
+    cursor: pointer;
 
     :hover{
         height: ${IllustrationSizeAnimated};
@@ -201,11 +211,12 @@ export const GroupItem2 = styled.div`
     left: 70vw;
     height: ${IllustrationSizeNormal};
     width: ${IllustrationSizeNormal};
-    background-image: url('${VideoCall}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?VideoCall:VideoCall_Dark}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;     
     transition: 500ms;
+    cursor: pointer;
 
     :hover{
         height: ${IllustrationSizeAnimated};
@@ -235,11 +246,12 @@ export const GroupItem3 = styled.div`
     left: 7vw;
     height: ${IllustrationSizeNormal};
     width: ${IllustrationSizeNormal};
-    background-image: url('${TodoList}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?TodoList:TodoList_Dark}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
     transition: 500ms;
+    cursor: pointer;
 
     :hover{
         height: ${IllustrationSizeAnimated};
@@ -270,11 +282,12 @@ export const GroupItem4 = styled.div`
     right:-95vw;
     height: ${IllustrationSizeNormal};
     width: ${IllustrationSizeNormal};
-    background-image: url('${Zenly}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?Zenly:Zenly_Dark}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;  
     transition: 500ms;
+    cursor: pointer;
 
     :hover{
         height: ${IllustrationSizeAnimated};
@@ -303,11 +316,12 @@ export const GroupItem5 = styled.div`
     right:-70vw;
     height: ${IllustrationSizeNormal};
     width: ${IllustrationSizeNormal};
-    background-image: url('${January}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?January:January_Dark}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;   
     transition: 500ms;
+    cursor: pointer;
 
     :hover{
         height: ${IllustrationSizeAnimated};
@@ -340,11 +354,12 @@ export const GroupItem6 = styled.div`
     left: 20vw;
     height: ${IllustrationSizeNormal};
     width: ${IllustrationSizeNormal};
-    background-image: url('${ChampagneBottle}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?ChampagneBottle:ChampagneBottle_Dark}');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;   
     transition: 500ms;
+    cursor: pointer;
 
     :hover{
         height: ${IllustrationSizeAnimated};

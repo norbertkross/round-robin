@@ -2,8 +2,8 @@
 export const lightTheme ={
     
     // Theme Color Of the App
-     themeColor:"#0022ff",
-     //themeColor:"#0cf02b",
+    //  themeColor:"#0022ff",
+     themeColor:"#0cf02b",
     //  themeColor:"#1a4ff7",
      // The Color Of The Background(Canvas)
      canvas:"#ffffff",
@@ -18,8 +18,8 @@ export const lightTheme ={
  export const darkTheme ={
  
      // Theme Color Of the App
-     themeColor:"#0022ff",
-    //  themeColor:"#0cf02b",
+    //  themeColor:"#0022ff",
+     themeColor:"#0cf02b",
     //  themeColor:"#1a4ff7",
      // The Color Of The Background(Canvas)
      canvas:"#292828",

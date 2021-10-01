@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore,applyMiddleware,compose}  from 'redux'
 import { Provider } from 'react-redux';
 import allReducer from './state/reducers/combined-reducers';
 import {createBrowserHistory} from 'history'
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router'
-
 import AllRoutes from './Components/Handle-Routes/allroutes';
 
 

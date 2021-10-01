@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Particles from "../../../assets/Particles.svg"
 import Quote from "../../../assets/quote.svg"
+import Quote_Dark from "../../../assets/assets-dark/quote.svg"
 import UserPicture from "../../../assets/Testee/istockphoto-1252881116-612x612.jpg"
 import ArrowUp from "../../../assets/upward_arrow.svg"
+import ArrowUp_Dark from "../../../assets/assets-dark/upward_arrow.svg"
 
 
 export const HomeLoweBody = styled.div`
@@ -118,7 +120,7 @@ export const CardBodyItemTop = styled.div`
 `;
 
 export const CardBodyItemTopQuote = styled.div`
-    background-image: url('${Quote}');
+    background-image: url('${props=> props.theme.canvas ==='#ffffff'?Quote:Quote_Dark}');
     height: 40px;
     width: 40px;
     background-repeat: no-repeat;
@@ -245,9 +247,9 @@ export const BottomLogosContainer = styled.div`
 `;
 
 export const BottomLogo = styled.div`
-  height: 60px;
-  width: 60px;
-  background-image: url('${props => props.url != null?props.url:ArrowUp}');
+  height: 45px;
+  width: 45px;
+  background-image: url('${props => props.url != null?props.url:props.theme.canvas ==='#ffffff'?ArrowUp:ArrowUp_Dark}');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -255,8 +257,8 @@ export const BottomLogo = styled.div`
   transition: 500ms;
 
 :hover{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 } 
   
 `;
@@ -275,7 +277,7 @@ export const BasePadding = styled.div`
 export const ArrowUpIcon = styled.div`
   height: 40px;
   width: 40px;
-  background-image: url('${ArrowUp}');
+  background-image: url('${props=> props.theme.canvas ==='#ffffff'?ArrowUp:ArrowUp_Dark}');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

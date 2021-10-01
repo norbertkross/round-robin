@@ -13,18 +13,15 @@ export const Container404 = styled.div`
 `;
 
 export const Text404 = styled.div`
-    color: ${props=>{
-        console.log(props.theme.themeColor);
-        
-        return props.theme.themeColor
-        }};
+
+    color:${props=>props.theme.themeColor};
     font-size: 20px;
     font-weight: bold;
     margin: 20px 5px;
 `;
 
 export const Image404 = styled.div`
-    background-color: violet;
+    /* background-color: violet; */
     margin: 20px 5px;
     height: 70vh;
     width: 70vh;
