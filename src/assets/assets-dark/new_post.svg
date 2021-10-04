@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="52" viewBox="0 0 60 52">
+  <defs>
+    <linearGradient id="linear-gradient" y1="235.85" x2="1" y2="235.85" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffad6b"/>
+      <stop offset="0.472" stop-color="#ff8b67"/>
+      <stop offset="0.62" stop-color="#ff8b67"/>
+      <stop offset="0.65" stop-color="#ff8f67"/>
+      <stop offset="0.822" stop-color="#ffa169"/>
+      <stop offset="0.947" stop-color="#ffa76a"/>
+      <stop offset="1" stop-color="#ffad6b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="406.269" x2="0.5" y2="405.269" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9af70"/>
+      <stop offset="1" stop-color="#ffb37b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-26.109" y1="171.298" x2="-26.091" y2="171.298" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff9757"/>
+      <stop offset="1" stop-color="#ffb65b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.5" y1="363.056" x2="0.5" y2="362.056" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f39d75"/>
+      <stop offset="0.226" stop-color="#f7ab82"/>
+      <stop offset="0.703" stop-color="#fdc298"/>
+      <stop offset="1" stop-color="#ffcba0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.5" y1="392.25" x2="0.5" y2="393.25" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#42d778"/>
+      <stop offset="0.428" stop-color="#3dca76"/>
+      <stop offset="1" stop-color="#34b171"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.5" y1="1883.8" x2="0.5" y2="1880.986" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff8b67"/>
+      <stop offset="0.847" stop-color="#ffa76a"/>
+      <stop offset="1" stop-color="#ffad6b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" y1="673.131" y2="671.512" xlink:href="#linear-gradient-6"/>
+  </defs>
+  <g id="new_post" transform="translate(-1732 -451)">
+    <path id="Path_230" data-name="Path 230" d="M55,52H9a5,5,0,0,1-5-5V17a5,5,0,0,1,5-5H55a5,5,0,0,1,5,5V47A5,5,0,0,1,55,52Z" transform="translate(1728 451)" fill="url(#linear-gradient)"/>
+    <path id="Path_231" data-name="Path 231" d="M5.023,49H12.5a2.5,2.5,0,0,0,0-5H9a2,2,0,0,1,0-4h.5a2.5,2.5,0,0,0,0-5H9a2,2,0,0,1,0-4h3.5a2.5,2.5,0,0,0,0-5H4V47a4.95,4.95,0,0,0,.546,2.229C4.683,48.918,4.843,48.762,5.023,49Z" transform="translate(1728 451)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_232" data-name="Path 232" d="M32,25,4.085,47.84A4.99,4.99,0,0,0,9,52H55a4.99,4.99,0,0,0,4.915-4.16L32,25" transform="translate(1728 451)" fill="url(#linear-gradient-3)"/>
+    <path id="Path_233" data-name="Path 233" d="M4.085,16.16l25.75,21.069a3.42,3.42,0,0,0,4.33,0L59.915,16.16A4.99,4.99,0,0,0,55,12H9A4.99,4.99,0,0,0,4.085,16.16Z" transform="translate(1728 451)" fill="url(#linear-gradient-4)"/>
+    <path id="Path_234" data-name="Path 234" d="M52,0A12,12,0,1,0,64,12,12,12,0,0,0,52,0Z" transform="translate(1728 451)" fill="url(#linear-gradient-5)"/>
+    <path id="Path_235" data-name="Path 235" d="M41.5,43h0A2.5,2.5,0,0,1,39,40.5h0A2.5,2.5,0,0,1,41.5,38h0A2.5,2.5,0,0,1,44,40.5h0A2.5,2.5,0,0,1,41.5,43Z" transform="translate(1728 451)" fill="url(#linear-gradient-6)"/>
+    <path id="Path_236" data-name="Path 236" d="M60,47V38H48.5a2.5,2.5,0,0,0,0,5H49a2,2,0,0,1,0,4H38.5a2.5,2.5,0,0,0,0,5H55A5,5,0,0,0,60,47Z" transform="translate(1728 451)" fill="url(#linear-gradient-7)"/>
+    <path id="Path_237" data-name="Path 237" d="M46,7V9a4,4,0,0,0,4,4h8" transform="translate(1728 451)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line id="Line_1" data-name="Line 1" x1="4" y2="4" transform="translate(1783 464)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line id="Line_2" data-name="Line 2" x1="4" y1="4" transform="translate(1783 460)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

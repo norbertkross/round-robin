@@ -13,14 +13,12 @@ const appReducer = ( state = {isdark:false},action) =>{
 
     function switchTheme(incomingState){
         var newState = incomingState.isdark === false? { ...incomingState, isdark: true } : { ...incomingState, isdark: false };
-        setData("theme-value",`${newState.isdark}`)
+        setData("theme-value",newState.isdark)
         return newState;
     }
 
-    function setThemeFromLocalStorage(incomingstate,newstate){
-        console.log(`NEW sTate: ${newstate}`);
-        // setData("theme-value",`${newState.isdark}`)
-        return { ...incomingstate, isdark: newstate }
+    function setThemeFromLocalStorage(incomingstate,newstate){        
+        return { ...incomingstate, isdark: newstate };
     }
 
 export default appReducer

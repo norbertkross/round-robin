@@ -253,6 +253,7 @@ export const BottomLogo = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  cursor: pointer;
   margin: 10px;
   transition: 500ms;
 

@@ -30,7 +30,7 @@ export const BaseContainer = styled.div`
     // TODO: should auto adjust 
     @media all and (max-width:650px) {
         /* height: ${props=>props.height ?'100vw':'100vh'}; */
-        min-height: ${props=>props.height ?'100vw':'100vh'};
+        min-height: ${props=>props.height  != null ?'100vw':'100vh'};
 
         }    
 `;
@@ -41,7 +41,7 @@ export const MiddleContaner = styled.div`
     /* background-color  :salmon ; */
         @media all and (max-width:650px) {
         /* background-color:yellowgreen; */
-        height: ${props=>props.height ?'calc(100vw + 35px)':'100vh'};
+        height: ${props=>props.height != null ?'calc(100vw + 35px)':'100vh'};
         }
 `;
 
@@ -116,7 +116,7 @@ export const HomeBodyTop = styled.div`
 
     @media all and (max-width:650px) {
         /* background-color:violet; */
-        height: ${props=>props.height ?'100vw':'100vh'};
+        height: ${props=>props.height  != null ?'100vw':'100vh'};
         }    
 
 `;
@@ -270,8 +270,8 @@ export const GroupItem3 = styled.div`
 
     @media all and (max-width:650px) {
         /* background-color: rebeccapurple; */
-        top: ${props=>props.height? '33vw':'40vh'};
-        left: ${props=>props.height? '3vh':'7vw'};
+        top: ${props=>props.height  != null?'33vw':'40vh'};
+        left: ${props=>props.height  != null? '3vh':'7vw'};
     }     
 
 `;

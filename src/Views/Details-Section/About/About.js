@@ -2,6 +2,7 @@
 import React from 'react'
 import { AboutBackArrow, AboutHome, AboutNavigation, HeaderImage, HeaderImageContainer, HeaderText, SubText, TextContainer } from './about-style'
 import { useHistory } from "react-router-dom";
+import { BottomGap } from '../Circle-ItemDetail/circle-item-details-style';
 
 function About(){
 
@@ -33,7 +34,8 @@ function About(){
                     Lorem ipsium sit dormet opnum saerti ipsium dorli Lorem ipsium sit dormet opnum saerti ipsium dorli
                     Lorem ipsium sit dormet opnum saerti ipsium dorli Lorem ipsium sit dormet opnum saerti ipsium dorli
                 </SubText>
-            </HeaderImageContainer>                      
+            </HeaderImageContainer> 
+            <BottomGap/>                     
         </AboutHome>
     )
 }

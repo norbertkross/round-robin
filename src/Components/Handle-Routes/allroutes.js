@@ -12,12 +12,12 @@ import {useEffect} from 'react'
 import { changeThemeFromLocal } from "../../state/actions/state-actions";
 import { getData } from "../../state/storage-local/setANDgetStorage";
 import Contact from "../../Views/Details-Section/Contact/Contact";
+import CircleItemDetails from "../../Views/Details-Section/Circle-ItemDetail/CircleItemDetails";
 
 
 
 function AllRoutes() {
     const themState = useSelector(state => {
-        console.log(`APP state: ${state.appReducer.isdark}`);
         return state.appReducer.isdark
       })    
 
@@ -25,9 +25,8 @@ function AllRoutes() {
     
       useEffect(() => {
         const localData = getData("theme-value")
-        // console.log(`Local ${localData}`)
-         dispatch(changeThemeFromLocal(localData))
-      }, [])
+          dispatch(changeThemeFromLocal(localData))
+      },)
 
     return (
     <ThemeProvider theme={themState === false ? lightTheme : darkTheme}>
@@ -39,6 +38,7 @@ function AllRoutes() {
                     <Route exact path="/" component={HoldHome} />
                     <Route path="/about" component={About} /> 
                     <Route path="/contact" component={Contact} /> 
+                    <Route path="/details/:id" component={CircleItemDetails} /> 
                     {/* <Route path="/widgets/:name/:id" component={CodeDetails}></Route> */}
 
                     {/* Paths that don't match */}
