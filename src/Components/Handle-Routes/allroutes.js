@@ -13,6 +13,7 @@ import { changeThemeFromLocal } from "../../state/actions/state-actions";
 import { getData } from "../../state/storage-local/setANDgetStorage";
 import Contact from "../../Views/Details-Section/Contact/Contact";
 import CircleItemDetails from "../../Views/Details-Section/Circle-ItemDetail/CircleItemDetails";
+import { MotionLayoutProvider } from "react-motion-layout";
 
 
 
@@ -34,6 +35,7 @@ function AllRoutes() {
     {/* <div onClick={e => switchTheme()}></div> */}
     <div>
         <Router>
+          <MotionLayoutProvider>
                 <Switch>
                     <Route exact path="/" component={HoldHome} />
                     <Route path="/about" component={About} /> 
@@ -44,6 +46,7 @@ function AllRoutes() {
                     {/* Paths that don't match */}
                     <Route path="*" component={App404route} />
                 </Switch>
+              </MotionLayoutProvider>
             </Router>
     </div>
     </ThemeProvider>
