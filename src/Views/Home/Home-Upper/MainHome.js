@@ -1,9 +1,8 @@
-import { useState, useEffect,useCallback } from "react"
+import { useState, useEffect } from "react"
 import { /*useSelector*/useDispatch } from "react-redux";
 import { changeTheme } from "../../../state/actions/state-actions";
 import { BaseContainer, CenterLogo, GroupItem1, GroupItem2, GroupItem3, GroupItem4, GroupItem5, GroupItem6, HoldRoundItems, HomeBodyTop, MiddleContaner, NavItem, NavItem2, TopHeader } from "../Home-Upper/main-home-style";
 import { useHistory } from "react-router-dom";
-import { MotionScene, MotionScreen, SharedElement, useMotion } from "react-motion-layout";
 
 function MainHome() {
     const history = useHistory();
@@ -41,16 +40,13 @@ function MainHome() {
             });
     }
 
-    const withTransition = useMotion(`front-scene`);
-    const callback = useCallback(() => history.push({ pathname: `/details/1}`}));
+
     function goToContactPage() {
         history.push(`/contact`);
     }
 
     return (
-        <div>
-            <MotionScreen>
-                <MotionScene  easing="cubic-bezier(0.22, 1, 0.36, 1)" name={`front-scene`} >
+        <div>            
                     <BaseContainer height={giveHeight()}>
                         <MiddleContaner height={giveHeight()}>
                             <TopHeader>
@@ -62,13 +58,8 @@ function MainHome() {
                                 <CenterLogo />
                             </HomeBodyTop>
                             {/* <h1>hello {themeState.isdark.toString()}</h1>   */}
-                            <HoldRoundItems>
-                                <SharedElement.Div animationKey={`el`} onClick={withTransition(callback)}>
-                                    <GroupItem1 height={giveHeight()} 
-                                    // onClick={(e) => { goToThisItem("1") }}
-                                     />
-                                </SharedElement.Div>
-
+                            <HoldRoundItems>                                
+                                <GroupItem1 height={giveHeight()} onClick={(e) => { goToThisItem("1") }}/>
                                 <GroupItem2 height={giveHeight()} onClick={(e) => { goToThisItem("2") }} />
                                 <GroupItem3 height={giveHeight()} onClick={(e) => { goToThisItem("3") }} />
                                 <GroupItem4 height={giveHeight()} onClick={(e) => { goToThisItem("4") }} />
@@ -78,8 +69,6 @@ function MainHome() {
 
                         </MiddleContaner>
                     </BaseContainer>
-                </MotionScene>
-            </MotionScreen>
         </div>
     );
 }

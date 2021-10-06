@@ -42,21 +42,21 @@ export default function Contact() {
                     {/* Username     */}
                     <InputItemContainer>
                         <InputIcon />
-                        <NameInput placeholder="Username" />
+                        <NameInput placeholder="Username ..." />
                     </InputItemContainer>
                     <InputFieldSpacing/>
 
                     {/* Email */}
                     <InputItemContainer>
                         <InputIcon url={Email}/>
-                        <NameInput placeholder="Email" />
+                        <NameInput placeholder="Email ..." />
                     </InputItemContainer>
                     <InputFieldSpacing/>
 
                     {/* Message */}
                     <InputItemContainer>
                         <InputIcon url={AddToChat}/>
-                        <TextMessageInput placeholder="Message" />
+                        <TextMessageInput placeholder="Message ..." />
                     </InputItemContainer>
 
                     <Gap4 />

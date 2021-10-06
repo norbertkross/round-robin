@@ -9,7 +9,6 @@ import TodoList from "../../../assets/todo_list.svg"
 import January from "../../../assets/january.svg"
 import Home from "../../../assets/home.svg"
 import ChampagneBottle from "../../../assets/champagne_bottle.svg"
-import { MotionScene, MotionScreen, SharedElement } from 'react-motion-layout';
 
 export default function CircleItemDetails() {
 
@@ -71,26 +70,20 @@ export default function CircleItemDetails() {
     }
 
     return (
-        <MotionScreen>
-            <MotionScene  easing="cubic-bezier(0.22, 1, 0.36, 1)" name={`front-scene`}>
-                <CircleItemHome>
-                    <CircleItemNavigation>
-                        <CircleItemBackArrow onClick={(e) => { moveBack() }} />
-                    </CircleItemNavigation>
-                    <DetailsContainer>
-                        <SharedElement.Div animationKey={`el`}>
-                            <DetailsContainerItemImage image={item[itemNumber() - 1]['image']} />
-                        </SharedElement.Div>
-                        <DetailsContainerItemTextBody>
-                            <DetailsHeaderText>{item[itemNumber() - 1]['name']}</DetailsHeaderText>
-                            <DetailsContainerItemText>
-                                {item[itemNumber() - 1]['description']}
-                            </DetailsContainerItemText>
-                        </DetailsContainerItemTextBody>
-                    </DetailsContainer>
-                    <BottomGap />
-                </CircleItemHome>
-            </MotionScene>
-        </MotionScreen>
+        <CircleItemHome>
+            <CircleItemNavigation>
+                <CircleItemBackArrow onClick={(e) => { moveBack() }} />
+            </CircleItemNavigation>
+            <DetailsContainer>
+                <DetailsContainerItemImage image={item[itemNumber() - 1]['image']} />
+                <DetailsContainerItemTextBody>
+                    <DetailsHeaderText>{item[itemNumber() - 1]['name']}</DetailsHeaderText>
+                    <DetailsContainerItemText>
+                        {item[itemNumber() - 1]['description']}
+                    </DetailsContainerItemText>
+                </DetailsContainerItemTextBody>
+            </DetailsContainer>
+            <BottomGap />
+        </CircleItemHome>
     )
 }

@@ -16,7 +16,7 @@ export const CircleItemBackArrow = styled.div`
     height: 40px;
     /* background-color: blue; */
     margin: 10px;
-    background-image: url('${props=> props.theme.canvas ==='#ffffff'?Up_Left:Up_Left_Dark}');
+    background-image: url('${props => props.theme.canvas === '#ffffff' ? Up_Left : Up_Left_Dark}');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -42,9 +42,28 @@ export const DetailsContainerItemImage = styled.div`
     background-position: center;    
     /* background-size: cover; */
     background-size: contain;
-
+    animation-name: heroic;
+    animation-duration: 500ms;
+    @keyframes heroic{
+    0%   {
+        width: 35vw;
+        height: 400px;
+    }
+    100% {
+        width: 43vw;
+        height: 500px;
+    }
+    }
     @media all and (max-width:600px){
         width: 90vw;  
+        @keyframes heroic{
+        0%   {
+            width: 75vw;
+        }
+        100% {
+            width: 90vw;
+        }
+      }
     }
 `;
 

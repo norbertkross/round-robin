@@ -30,6 +30,7 @@ export const ParticlesContainer = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    /* background-color: coral; */
 
     @media all and (max-width:650px) {
         /* background-color: pink; */
@@ -230,6 +231,7 @@ export const BottomItemsSubText = styled.div`
     font-weight: 400;
     font-size: 18px;
     margin: 2px 5px;
+    cursor: pointer;
 `;
 
 

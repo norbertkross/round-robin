@@ -6,7 +6,7 @@ import { connectRouter } from "connected-react-router";
 const allReducer = (history) =>combineReducers({
     router: connectRouter(history),
     appReducer,
-    secondReducer
+    secondReducer,
 })
 
 export default allReducer 

@@ -13,8 +13,8 @@ import { changeThemeFromLocal } from "../../state/actions/state-actions";
 import { getData } from "../../state/storage-local/setANDgetStorage";
 import Contact from "../../Views/Details-Section/Contact/Contact";
 import CircleItemDetails from "../../Views/Details-Section/Circle-ItemDetail/CircleItemDetails";
-import { MotionLayoutProvider } from "react-motion-layout";
-
+import AboutHomePageButton from "../../Views/Details-Section/About/AboutHomePageButton";
+import FacilitiesHome from "../../Views/Details-Section/Facilities/Facilities";
 
 
 function AllRoutes() {
@@ -35,18 +35,17 @@ function AllRoutes() {
     {/* <div onClick={e => switchTheme()}></div> */}
     <div>
         <Router>
-          <MotionLayoutProvider>
                 <Switch>
                     <Route exact path="/" component={HoldHome} />
                     <Route path="/about" component={About} /> 
                     <Route path="/contact" component={Contact} /> 
                     <Route path="/details/:id" component={CircleItemDetails} /> 
+                    <Route path="/facility" component={FacilitiesHome} /> 
                     {/* <Route path="/widgets/:name/:id" component={CodeDetails}></Route> */}
 
                     {/* Paths that don't match */}
                     <Route path="*" component={App404route} />
                 </Switch>
-              </MotionLayoutProvider>
             </Router>
     </div>
     </ThemeProvider>
@@ -57,7 +56,7 @@ function AllRoutes() {
 function HoldHome(){
     return(
         <div>
-        <MainHome></MainHome>
+        <MainHome/>
         <HomeLower />
       </div>
     );

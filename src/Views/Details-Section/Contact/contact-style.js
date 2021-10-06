@@ -108,7 +108,7 @@ export const ContactCardBody = styled.div`
 
 export const ContactCard = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 30px;
+    border-radius: 15px;
     width: 450px;
 
     @media all and (max-width:500px){
@@ -122,7 +122,7 @@ export const ContactCard = styled.div`
 
 
 export const CardContentTopGap = styled.div`
-    height: 30px;
+    height: 20px;
 `;
 
 export const InputItemContainer = styled.div`
@@ -201,7 +201,7 @@ export const InputFieldSpacing = styled.div`
 `;
 
 export const Gap4 = styled.div`
-    height: 10px;
+    height: 5px;
 `;
 
 

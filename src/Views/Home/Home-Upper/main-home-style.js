@@ -179,7 +179,6 @@ export const GroupItem1 = styled.div`
     background-repeat: no-repeat; 
     transition: 500ms;
     cursor: pointer;
-
     :hover{
         height: ${IllustrationSizeAnimated};
         width: ${IllustrationSizeAnimated};
@@ -200,9 +199,7 @@ export const GroupItem1 = styled.div`
         top: 2vw;
         left: 30vw;
     }
-
-
-
+    
 `;
 
 export const GroupItem2 = styled.div`

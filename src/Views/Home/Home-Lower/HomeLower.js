@@ -9,6 +9,7 @@ import LinkedIn from "../../../assets/linkedin.svg"
 import LinkedIn_Dark from "../../../assets/assets-dark/linkedin.svg"
 import { useEffect, useState } from "react";
 import {useSelector} from 'react-redux'
+import AboutHomePageButton from "../../Details-Section/About/AboutHomePageButton";
 
 
 function HomeLower() {
@@ -98,7 +99,7 @@ function HomeLower() {
 
     return (
         <HomeLoweBody>
-            <GapBetween />
+            {/* <GapBetween /> */}
             <ParticlesContainer>
                 <CarouselContainer>
                     <CarouselChild>
@@ -108,7 +109,7 @@ function HomeLower() {
                     </CarouselChild>
                 </CarouselContainer>
             </ParticlesContainer>
-
+               <AboutHomePageButton/> 
             {/* Bottom Container */}
             <SpaceBeforeBottom/>            
             <BottomContainer>
