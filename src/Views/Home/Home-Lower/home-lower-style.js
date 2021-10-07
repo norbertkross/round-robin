@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Particles from "../../../assets/Particles.svg"
 import Quote from "../../../assets/quote.svg"
 import Quote_Dark from "../../../assets/assets-dark/quote.svg"
-import UserPicture from "../../../assets/Testee/istockphoto-1252881116-612x612.jpg"
+// import UserPicture from "../../../assets/Testee/istockphoto-1252881116-612x612.jpg"
+import UserPicture from "../../../assets/Testee/zxf.jpg"
 import ArrowUp from "../../../assets/upward_arrow.svg"
 import ArrowUp_Dark from "../../../assets/assets-dark/upward_arrow.svg"
 

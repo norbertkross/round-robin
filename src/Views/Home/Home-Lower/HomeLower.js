@@ -1,4 +1,7 @@
-import { ArrowUpContainer, ArrowUpIcon, BasePadding, BottomContainer, BottomItemsDiv, BottomItemsHeader, BottomItemsSubText, BottomLayer, BottomLogo, BottomLogosContainer, CardBodyItemTop, CardBodyItemTopImage, CardBodyItemTopName, CardBodyItemTopQuote, CardContent, CarouselChild, CarouselChildInner, CarouselContainer, GapBetween, HomeLoweBody, PaddingAfterCardContent, ParticlesContainer, SpaceBeforeBottom } from "./home-lower-style";
+import { ArrowUpContainer, ArrowUpIcon, BasePadding, BottomContainer, BottomItemsDiv, BottomItemsHeader, 
+    BottomItemsSubText, BottomLayer, BottomLogo, BottomLogosContainer, CardBodyItemTop, CardBodyItemTopImage, 
+    CardBodyItemTopName, CardBodyItemTopQuote, CardContent, CarouselChild, CarouselChildInner, CarouselContainer, 
+    HomeLoweBody, PaddingAfterCardContent, ParticlesContainer, SpaceBeforeBottom } from "./home-lower-style";
 import Github from "../../../assets/github.svg"
 import Github_Dark from "../../../assets/assets-dark/github.svg"
 import Twitter from "../../../assets/twitter.svg"

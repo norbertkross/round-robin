@@ -13,7 +13,6 @@ import { changeThemeFromLocal } from "../../state/actions/state-actions";
 import { getData } from "../../state/storage-local/setANDgetStorage";
 import Contact from "../../Views/Details-Section/Contact/Contact";
 import CircleItemDetails from "../../Views/Details-Section/Circle-ItemDetail/CircleItemDetails";
-import AboutHomePageButton from "../../Views/Details-Section/About/AboutHomePageButton";
 import FacilitiesHome from "../../Views/Details-Section/Facilities/Facilities";
 
 

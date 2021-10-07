@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Up_Left from "../../../assets/up_left.svg";
 import Up_Left_Dark from "../../../assets/assets-dark/up_left.svg";
-import Code_Review from "../../../assets/Testee/istockphoto-1252881116-612x612.jpg";
+import Code_Review from "../../../assets/Testee/taking-notes-on-programming.jpg";
 import Arrow from "../../../assets/arrow.png";
 import Arrow_Dark from "../../../assets/assets-dark/arrow.png";
 

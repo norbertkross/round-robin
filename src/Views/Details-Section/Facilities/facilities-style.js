@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Up_Left from "../../../assets/up_left.svg";
 import Up_Left_Dark from "../../../assets/assets-dark/up_left.svg";
-import Code_Review from "../../../assets/Testee/istockphoto-1252881116-612x612.jpg";
 import Stuff from "../../../assets/Testee/contact-us-flatlay.jpg";
 import Notestaking from "../../../assets/Testee/taking-notes-on-programming.jpg";
+
 export const FacilityHome = styled.div`
     
 `;
@@ -82,10 +82,15 @@ export const ItemCard = styled.div`
     border-radius: 8px;
     cursor: pointer;
     margin: 30px 15px;
+    transition:500ms;
     box-shadow:${props => props.theme.canvas === '#ffffff' ? "0px 2px 8px 1px rgb(0,0,0,0.12)" : "0px 2px 8px 1px rgb(255,255,255,0.06)"} ;
     
     @media all and (max-width:400px){
         width: 90vw;
+    }
+    :hover{
+        width: 310px;
+        margin-bottom:10px;
     }
 `;
 
