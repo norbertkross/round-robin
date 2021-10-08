@@ -44,6 +44,7 @@ export const DetailsContainerItemImage = styled.div`
     background-size: contain;
     animation-name: heroic;
     animation-duration: 500ms;
+    transition:500ms;
     @keyframes heroic{
     0%   {
         width: 35vw;
@@ -53,6 +54,11 @@ export const DetailsContainerItemImage = styled.div`
         width: 43vw;
         height: 500px;
     }
+    }
+
+    :hover{
+        width: 33vw;
+        height: 380px;        
     }
     @media all and (max-width:600px){
         width: 90vw;  
@@ -64,6 +70,9 @@ export const DetailsContainerItemImage = styled.div`
             width: 90vw;
         }
       }
+      :hover{
+        width: 80vw;       
+    }
     }
 `;
 

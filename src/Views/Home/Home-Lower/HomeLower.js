@@ -1,6 +1,7 @@
 import { ArrowUpContainer, ArrowUpIcon, BasePadding, BottomContainer, BottomItemsDiv, BottomItemsHeader, 
     BottomItemsSubText, BottomLayer, BottomLogo, BottomLogosContainer, CardBodyItemTop, CardBodyItemTopImage, 
     CardBodyItemTopName, CardBodyItemTopQuote, CardContent, CarouselChild, CarouselChildInner, CarouselContainer, 
+    GapBetween, 
     HomeLoweBody, PaddingAfterCardContent, ParticlesContainer, SpaceBeforeBottom } from "./home-lower-style";
 import Github from "../../../assets/github.svg"
 import Github_Dark from "../../../assets/assets-dark/github.svg"
@@ -102,6 +103,7 @@ function HomeLower() {
 
     return (
         <HomeLoweBody>
+            <GapBetween/>
             {/* <GapBetween /> */}
             <ParticlesContainer>
                 <CarouselContainer>
@@ -132,13 +134,14 @@ function HomeLower() {
                 {size.width>500?<ArrowUpIcon/>: <div/>}               
             </BottomLayer>
             <BottomLayer>
-            {size.width <=500? <ArrowUpContainer>
+            {size.width <=500? 
+                <ArrowUpContainer>
                    <ArrowUpIcon/>
                 </ArrowUpContainer> : <div/>} 
 
                                
             </BottomLayer>
-            <div style={{height:"5px"}}/>
+            <div style={{height:"20px"}}/>
         </HomeLoweBody>
     );
 }

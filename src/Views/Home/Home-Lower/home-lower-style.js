@@ -13,7 +13,7 @@ export const HomeLoweBody = styled.div`
 `;
 
 export const GapBetween = styled.div`
-    height: 160px;
+    height: 80px;
     width: 100vw;
     /* background-color: greenyellow; */
     @media all and (max-width:350px){
@@ -108,8 +108,12 @@ export const CarouselChildInner = styled.div`
       }
 
     @media all and (max-width:350px){
-        width: 85vw;
+        width: 80vw;
         margin: 20px 5px;
+    }
+
+    @media all and (max-width:400px){
+        width: 83vw;
     }
 `;
 
@@ -195,8 +199,7 @@ export const BottomContainer = styled.div`
 
     @media all and (max-width: 400px){
         flex-direction: column;
-        align-items: baseline;
-        /* margin: 10px 10px; */
+        align-items: center;
 
     }
 
@@ -214,6 +217,8 @@ export const BottomItemsDiv = styled.div`
     @media all and (max-width: 400px){
         margin: 20px 0px;
         align-items: baseline;
+        align-items: center;
+
 
     }
 
@@ -238,7 +243,8 @@ export const BottomItemsSubText = styled.div`
 
 export const BottomLayer = styled.div`
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between; 
+    width: 100vw;
 `;
 
 
@@ -270,7 +276,7 @@ export const BottomLogo = styled.div`
 
 export const ArrowUpContainer = styled.div`
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100vw;
 `;
 

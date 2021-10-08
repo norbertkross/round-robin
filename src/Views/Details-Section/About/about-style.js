@@ -93,7 +93,8 @@ export const HomeAboutButtonCard = styled.div`
     box-shadow:${props => props.theme.canvas ==='#ffffff'?"0px 2px 8px 1px rgb(0,0,0,0.12)":"0px 2px 8px 1px rgb(255,255,255,0.06)"} ;
     
     @media all and (max-width:400px){
-        width: 90vw;
+        width: 85vw;
+        height: 70px;
     }
 `;
 
@@ -141,6 +142,12 @@ export const HomeAboutCardInnerButton = styled.div`
     box-shadow: 0px 2px 8px 1px rgb(0,0,0,0.2);
     /* margin-right: 8px; */
     cursor: pointer;
+
+    @media all and (max-width:400px){
+        margin-top: 3px;
+    width: 75px;
+    height: 55px;
+    }   
 `;
 
 

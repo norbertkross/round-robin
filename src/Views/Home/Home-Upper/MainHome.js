@@ -54,7 +54,7 @@ function MainHome() {
                                 <NavItem onClick={e => { goToContactPage() }} />
                             </TopHeader>
 
-                            <HomeBodyTop>
+                            <HomeBodyTop height={giveHeight()}>
                                 <CenterLogo />
                             </HomeBodyTop>
                             {/* <h1>hello {themeState.isdark.toString()}</h1>   */}
@@ -66,7 +66,6 @@ function MainHome() {
                                 <GroupItem5 height={giveHeight()} onClick={(e) => { goToThisItem("5") }} />
                                 <GroupItem6 height={giveHeight()} onClick={(e) => { goToThisItem("6") }} />
                             </HoldRoundItems>
-
                         </MiddleContaner>
                     </BaseContainer>
         </div>

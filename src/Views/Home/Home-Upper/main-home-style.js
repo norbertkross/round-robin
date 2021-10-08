@@ -30,7 +30,7 @@ export const BaseContainer = styled.div`
     // TODO: should auto adjust 
     @media all and (max-width:650px) {
         /* height: ${props=>props.height ?'100vw':'100vh'}; */
-        min-height: ${props=>props.height  != null ?'100vw':'100vh'};
+        min-height: ${props=>props.height  != null ?'calc(100vw + 35px)':'100vh'};
 
         }    
 `;
@@ -111,12 +111,9 @@ export const HomeBodyTop = styled.div`
 
     // Accomosate for 35px top and down
     height: calc(100vh - 35px);
-    /* background-color: rgb(175,235,30,.4); */
     width: 100vw;
-
     @media all and (max-width:650px) {
-        /* background-color:violet; */
-        height: ${props=>props.height  != null ?'100vw':'100vh'};
+        height: ${props=>props.height  != null ?'calc(100vw + 35px)':'100vh'};
         }    
 
 `;

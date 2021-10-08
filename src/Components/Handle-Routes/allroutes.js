@@ -29,7 +29,7 @@ function AllRoutes() {
       },)
 
     return (
-    <ThemeProvider theme={themState === false ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themState === false || themState === null? lightTheme : darkTheme}>
     <GlobalStyles />
     {/* <div onClick={e => switchTheme()}></div> */}
     <div>
