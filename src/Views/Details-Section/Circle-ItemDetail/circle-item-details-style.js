@@ -32,6 +32,25 @@ export const DetailsContainer = styled.div`
     /* background-color: coral; */
 `;
 
+export const ImageView = styled.div`
+/* background-color: coral; */
+display: flex;
+flex-direction: column;
+align-items: center;
+`;
+
+export const ImageViewButton = styled.div`
+    /* display: inline-block; */
+    background-color: ${props => props.theme.themeColor};
+    color: ${props => props.theme.canvas};
+    font-weight: bold;
+    padding: 10px 30px;
+    width: max-content;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 8px 1px rgb(0,0,0,0.2);
+    cursor: pointer;
+`;
 
 export const DetailsContainerItemImage = styled.div`
     width: 43vw;
@@ -79,7 +98,7 @@ export const DetailsContainerItemImage = styled.div`
 
 export const DetailsContainerItemTextBody = styled.div`
     width: 43vw;
-    /* background-color: coral; */
+    /* background-color: red; */
     @media all and (max-width:600px){
         width: 90vw;  
     }  

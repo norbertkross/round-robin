@@ -1,5 +1,5 @@
 import React from 'react'
-import { CircleItemBackArrow, CircleItemNavigation, CircleItemHome, DetailsContainer, DetailsContainerItemImage, DetailsContainerItemText, BottomGap, DetailsContainerItemTextBody, DetailsHeaderText, } from './circle-item-details-style'
+import { CircleItemBackArrow, CircleItemNavigation, CircleItemHome, DetailsContainer, DetailsContainerItemImage, DetailsContainerItemText, BottomGap, DetailsContainerItemTextBody, DetailsHeaderText, ImageView, ImageViewButton, } from './circle-item-details-style'
 import { useHistory, useParams } from "react-router-dom";
 
 // Images
@@ -78,6 +78,13 @@ export default function CircleItemDetails() {
     }
 
 
+    function GoToFacilities() {
+        // history.push("/home");
+        history.replace("/facility");
+        // history.goBack();
+    }
+
+
     function itemNumber() {
         return Number(params["id"]) || 1
     }
@@ -88,7 +95,10 @@ export default function CircleItemDetails() {
                 <CircleItemBackArrow onClick={(e) => { moveBack() }} />
             </CircleItemNavigation>
             <DetailsContainer>
-                <DetailsContainerItemImage image={item[itemNumber() - 1]['image']} />
+                <ImageView>
+                    <DetailsContainerItemImage image={item[itemNumber() - 1]['image']} />
+                    <ImageViewButton onClick={(e)=>{GoToFacilities()}}>View All</ImageViewButton>
+                </ImageView>
                 <DetailsContainerItemTextBody>
                     <DetailsHeaderText>{item[itemNumber() - 1]['name']}</DetailsHeaderText>
                     <DetailsContainerItemText>

@@ -17,14 +17,14 @@ function FacilitiesHome(){
 
     function moveBack(){
         // history.push("/home");
-        history.replace("/");
-        // history.goBack();
+        // history.push("/home");
+        // history.replace("/");
+        history.goBack();
     }
 
     const items  = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 
 function giveImage(i){
-    console.log(`${typeof i}`); 
     switch (i){
         case 1: return NJio;
         case 2: return CrosPencils;
@@ -42,10 +42,6 @@ function giveImage(i){
         default: return Jfh;
     }
 }
-
-
-
-console.log(giveImage(2));
 
     return (
         <FacilityHome>
