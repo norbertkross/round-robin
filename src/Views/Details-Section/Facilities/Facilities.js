@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react'
-import { AboutBackArrow, FacilityHome, AboutNavigation, HeaderImage, HeaderImageContainer, HeaderText, Text, TextContainer, SubItems, ItemCard, Picture, Price, ItemName, CounterBase, CounterLowerItem, CounterRow, ReduceCounter, AddToCounter, ShowCounterValue, CounterBaseRow, AddToCartButton, CartRevealer, CartRevealerButton, CartRevealerButtonImage, AddToCartButtonImage } from './facilities-style'
+import React, { useState, } from 'react'
+import { AboutBackArrow, FacilityHome, AboutNavigation, HeaderImage, HeaderImageContainer, HeaderText, Text, TextContainer, SubItems, ItemCard, Picture, Price, ItemName, CounterBase, CounterLowerItem, CounterRow, ReduceCounter, AddToCounter, ShowCounterValue, CounterBaseRow, AddToCartButton, CartRevealer, CartRevealerButton, CartRevealerButtonImage, AddToCartButtonImage, PopUpCard, PopUpCardBody, Modal, Verified, CardContentBody, CheckoutLabel, CardContentBodyColumn, Listview, PayButtonBody, PayButton, CardPay, PurchasedItem, PurchasedItemImage, PurchasedItemDetailsColumn, ItemsDetailLabel, PriceLabel, PriceNQuantityLabel, QuantityLabel, SubTotal, PriceLabelSubTotal } from './facilities-style'
 import { useHistory } from "react-router-dom";
 import { BottomGap } from '../Circle-ItemDetail/circle-item-details-style';
 
@@ -26,125 +26,130 @@ function FacilitiesHome() {
 
     const [shopItems, setItemsState] = useState([
         {
-        "name":"Chicken Toaster",
-        "price":24.34,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Chicken Toaster",
+            "price": 24.34,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Yinbirl",
-        "price":660.4,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Yinbirl",
+            "price": 660.4,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"King Toast",
-        "price":71.5,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "King Toast",
+            "price": 71.5,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Kwadcnt",
-        "price":234,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Kwadcnt",
+            "price": 234,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Chicken",
-        "price":4.34,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Chicken",
+            "price": 4.34,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Toaster",
-        "price":24.34,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Toaster",
+            "price": 24.34,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Yinbirl",
-        "price":660.4,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Yinbirl",
+            "price": 660.4,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"King Toast",
-        "price":71.5,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "King Toast",
+            "price": 71.5,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Kwadcnt",
-        "price":234,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Kwadcnt",
+            "price": 234,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Chicken",
-        "price":4.34,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Chicken",
+            "price": 4.34,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
         {
-        "name":"Toaster",
-        "price":24.34,
-        "quantity":0,
-        "openedState":false,
-        "selected":false,
+            "name": "Toaster",
+            "price": 24.34,
+            "quantity": 1,
+            "openedState": false,
+            "selected": false,
 
         },
     ]);
 
+    const [showDialog, setDialogState] = useState(false);
+
+    function showAndDismissDialog() {
+        setDialogState(!showDialog)
+    }
     // Show The Counter for this item so I can Pick it    
-    function showCounterAtIndex(index){
+    function showCounterAtIndex(index) {
         var newArr = [...shopItems];
         newArr[index]["openedState"] = !newArr[index]["openedState"];
         setItemsState(newArr);
     }
 
     // INCREMEMNT
-    function incrementCounterAtIndex(index){
+    function incrementCounterAtIndex(index) {
         var newArr = [...shopItems];
         newArr[index]["quantity"] = newArr[index]["quantity"] + 1;
         setItemsState(newArr);
     }
 
     // DECREMENT
-    function decrementCounterAtIndex(index){
+    function decrementCounterAtIndex(index) {
         console.log(index);
         var newArr = [...shopItems];
-        if(newArr[index]["quantity"] >0){ 
-            newArr[index]["quantity"] = newArr[index]["quantity"]-1;
+        if (newArr[index]["quantity"] > 1) {
+            newArr[index]["quantity"] = newArr[index]["quantity"] - 1;
         };
         setItemsState(newArr);
     }
 
     // Show The Counter for this item so I can Pick it    
-    function showSelected(index){
+    function showSelected(index) {
         var newArr = [...shopItems];
         newArr[index]["selected"] = !newArr[index]["selected"];
         setItemsState(newArr);
-    }    
+    }
 
     function giveImage(i) {
         switch (i) {
@@ -181,17 +186,19 @@ function FacilitiesHome() {
                 </HeaderText>
             </TextContainer>
             <SubItems>
-            <CartRevealer>
-                <CartRevealerButton>
-                    <CartRevealerButtonImage>
-                    </CartRevealerButtonImage>
-                </CartRevealerButton>
-            </CartRevealer> 
-            </SubItems>             
+                <CartRevealer>
+                    <CartRevealerButton
+                        onClick={(e) => { showAndDismissDialog() }}
+                    >
+                        <CartRevealerButtonImage>
+                        </CartRevealerButtonImage>
+                    </CartRevealerButton>
+                </CartRevealer>
+            </SubItems>
             <HeaderImageContainer>
                 <SubItems>
                     {shopItems.map((item, index) => {
-                        return <ItemCard>
+                        return <ItemCard key={index}>
                             <div>
                                 <Picture image={giveImage(index)} />
                                 <Text>
@@ -199,38 +206,86 @@ function FacilitiesHome() {
                                     <ItemName>{shopItems[index]["name"]}</ItemName>
                                     <div style={{ height: "15px" }}></div>
 
-                                  { shopItems[index]["openedState"] === false? <CartRevealer>
-                                        <CartRevealerButton onClick={e =>{showCounterAtIndex(index)}}>
+                                    {shopItems[index]["openedState"] === false ? <CartRevealer>
+                                        <CartRevealerButton onClick={e => { showCounterAtIndex(index) }}>
                                             <CartRevealerButtonImage>
                                             </CartRevealerButtonImage>
                                         </CartRevealerButton>
                                     </CartRevealer> :
-                                    // <div style={{ height: "10px" }}></div>
-                                    <CounterBaseRow>
-                                    <CounterBase>
-                                        <CounterLowerItem></CounterLowerItem>
-                                        <CounterRow>
-                                            <ReduceCounter onClick={e =>{decrementCounterAtIndex(index)}}>-</ReduceCounter>
-                                            <ShowCounterValue>{shopItems[index]["quantity"]}</ShowCounterValue>
-                                            <AddToCounter onClick={e =>{incrementCounterAtIndex(index)}}>+</AddToCounter>
-                                        </CounterRow>
-                                    </CounterBase>
-                                    <AddToCartButton onClick={e =>{showSelected(index)}}>
-                                        <AddToCartButtonImage isChecked={shopItems[index]["selected"]}></AddToCartButtonImage>
-                                    </AddToCartButton>
-                                    </CounterBaseRow>
-                                   }
-                                    </Text>
+                                        // <div style={{ height: "10px" }}></div>
+                                        <CounterBaseRow>
+                                            <CounterBase>
+                                                <CounterLowerItem></CounterLowerItem>
+                                                <CounterRow>
+                                                    <ReduceCounter onClick={e => { decrementCounterAtIndex(index) }}>-</ReduceCounter>
+                                                    <ShowCounterValue>{shopItems[index]["quantity"]}</ShowCounterValue>
+                                                    <AddToCounter onClick={e => { incrementCounterAtIndex(index) }}>+</AddToCounter>
+                                                </CounterRow>
+                                            </CounterBase>
+                                            <AddToCartButton onClick={e => { showSelected(index) }}>
+                                                <AddToCartButtonImage isChecked={shopItems[index]["selected"]}></AddToCartButtonImage>
+                                            </AddToCartButton>
+                                        </CounterBaseRow>
+                                    }
+                                </Text>
                             </div>
                         </ItemCard>
                     })}
 
                 </SubItems>
-            </HeaderImageContainer>          
+            </HeaderImageContainer>
             <BottomGap />
+
+            {/* THIS IS A POP-UP DIALOG   */}
+
+            {showDialog === true ?
+                <Modal onClick={(e) => { showAndDismissDialog() }}>
+                    {/* <PopUpBody onClick={(e)=>{showAndDismissDialog()}}> */}
+                    <PopUpCardBody>
+                        <PopUpCard>
+                            <CardContentBody>
+                                <CardContentBodyColumn>
+                                    <Verified />
+                                    <CheckoutLabel>Check Out</CheckoutLabel>
+                                    <Listview>
+                                    {shopItems.map((item, index) => {
+                                        return <PurchasedItem>
+                                        <PurchasedItemImage />
+                                        <PurchasedItemDetailsColumn>
+                                            <ItemsDetailLabel>
+                                                Checken Roaster
+                                            </ItemsDetailLabel>
+                                            <PriceNQuantityLabel>
+                                                <PriceLabel>$ 2347.72</PriceLabel>
+                                                <QuantityLabel>(x2)</QuantityLabel>
+                                            </PriceNQuantityLabel>
+                                            <SubTotal>
+                                                    <PriceLabelSubTotal>$78634</PriceLabelSubTotal>
+                                                </SubTotal>                                                
+                                        </PurchasedItemDetailsColumn>
+                                    </PurchasedItem>})}
+                                        
+                                    </Listview>
+                                     
+                                    <PayButtonBody>
+                                        <PayButtonBody>
+                                            <PayButton onClick={e => {
+                                                e.stopPropagation();
+                                            }}>
+                                                Pay
+                                                <CardPay />
+                                            </PayButton>
+                                        </PayButtonBody>
+                                    </PayButtonBody>
+                                </CardContentBodyColumn>
+                            </CardContentBody>
+                        </PopUpCard>
+                    </PopUpCardBody>
+                </Modal>
+                : <div style={{ width: "0px", height: "0px" }}></div>
+            }
         </FacilityHome>
     )
 }
-
 
 export default FacilitiesHome

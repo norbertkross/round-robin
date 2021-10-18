@@ -6,9 +6,12 @@ import Check from "../../../assets/checkmark.svg";
 import UnCheck from "../../../assets/multiply.svg";
 import Notestaking from "../../../assets/Testee/taking-notes-on-programming.jpg";
 import CrosPencils from "../../../assets/Testee/pexels-ann-h-1762851.jpg"
+import Approval from "../../../assets/approval.svg"
+import CardPayment from "../../../assets/card_payment.svg"
 
 export const FacilityHome = styled.div`
-    
+    // Added This To CONTROL POP SCROLLING BEHAVIOR
+    position: absolute;    
 `;
 
 export const AboutNavigation = styled.div`
@@ -278,3 +281,191 @@ export const AddToCartButtonImage = styled.div`
     background-size: contain;
 `;
 
+
+
+export const Modal = styled.div`
+  /* The Modal (background) */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: grid;
+  place-items: center;
+`;
+
+
+// export const PopUpBody = styled.div`
+//     position: absolute;
+//     top: 0px;
+//     display: grid;
+//     /* place-items: center; */
+//     width: 100%;
+//     height:100%;
+//     background-color:${props=> props.theme.canvas ==='#ffffff'?"rgb(36, 36, 36,.7)":"rgb(217, 217, 217,.85)"} ;   
+// `;
+
+
+/// POPUP menu Dialog
+export const PopUpCardBody = styled.div`
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20vh; */
+`;
+
+export const PopUpCard = styled.div`
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 400px;
+    /* height: 350px; */
+    background-color: ${props => props.theme.canvas};
+    bottom: 20px;
+    @media all and (max-width:500px){
+        width: 95vw;
+    }
+
+    @media all and (max-width:300px){
+        width: 98vw;
+    }
+`;
+
+export const CardContentBody = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+export const CardContentBodyColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const Verified = styled.div`
+    margin: 10px 0px;
+    height: 25px;
+    width: 25px;
+    background-image: url('${Approval}');
+    /* background-color: deeppink; */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: contain;    
+`;
+
+export const CheckoutLabel = styled.div`
+    color: grey;
+    font-size: 16px;
+    font-weight: 500;
+`;
+
+export const Listview = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    width: 350px;
+    overflow-y: scroll;
+    /* background-color: rgba(0,0,0,0.06); */
+    margin: 8px 0px;
+
+    @media all and (max-width:400px){
+        width: 90vw;
+    }    
+`;
+
+export const PayButtonBody = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+`;
+
+export const PayButton = styled.div`
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 5px 20px;
+    color: ${props =>props.theme.themeColor};
+    margin: 16px 8px;
+    cursor: pointer;
+`;
+
+
+export const CardPay = styled.div`
+    margin-left: 8px;
+    height: 35px;
+    width: 35px;
+    background-image: url('${CardPayment}');
+    /* background-color: deeppink; */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;    
+`;
+
+
+export const PurchasedItem = styled.div`
+    background-color: ${props => props.theme.canvas};
+    display: flex;
+    margin: 10px 8px;
+    padding: 4px 0px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+`;
+
+
+export const PurchasedItemImage= styled.div`
+    width: 70px;
+    height: 100%;
+    background-color: chartreuse;
+    margin:0px 6px;
+    border-radius: 10px 0px 0px 10px;
+`;
+
+
+export const PurchasedItemDetailsColumn= styled.div`
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 70px);
+`;
+
+export const ItemsDetailLabel = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 500;
+`;
+
+export const PriceNQuantityLabel = styled.div`
+    display: flex;
+`;
+
+export const PriceLabel = styled.div`
+    color: grey;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 0px;
+`;
+
+export const QuantityLabel = styled.div`
+    color: ${props => props.theme.themeColor};
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+`;
+
+
+export const SubTotal = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`;
+
+
+export const PriceLabelSubTotal = styled.div`
+    color: grey;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 20px;
+`;
