@@ -80,7 +80,7 @@ export default function CircleItemDetails() {
 
     function GoToFacilities() {
         // history.push("/home");
-        history.replace("/facility");
+        history.replace("/products");
         // history.goBack();
     }
 

@@ -13,7 +13,7 @@ import { changeThemeFromLocal } from "../../state/actions/state-actions";
 import { getData } from "../../state/storage-local/setANDgetStorage";
 import Contact from "../../Views/Details-Section/Contact/Contact";
 import CircleItemDetails from "../../Views/Details-Section/Circle-ItemDetail/CircleItemDetails";
-import FacilitiesHome from "../../Views/Details-Section/Facilities/Facilities";
+import FacilitiesHome from "../../Views/Details-Section/Products/Facilities";
 
 
 function AllRoutes() {
@@ -39,7 +39,7 @@ function AllRoutes() {
                     <Route path="/about" component={About} /> 
                     <Route path="/contact" component={Contact} /> 
                     <Route path="/details/:id" component={CircleItemDetails} /> 
-                    <Route path="/facility" component={FacilitiesHome} /> 
+                    <Route path="/products" component={FacilitiesHome} /> 
                     {/* <Route path="/widgets/:name/:id" component={CodeDetails}></Route> */}
 
                     {/* Paths that don't match */}

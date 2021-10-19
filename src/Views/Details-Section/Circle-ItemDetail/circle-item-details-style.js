@@ -46,9 +46,9 @@ export const ImageViewButton = styled.div`
     font-weight: bold;
     padding: 10px 30px;
     width: max-content;
-    margin: 10px;
+    margin: 20px 10px;
     border-radius: 3px;
-    box-shadow: 0px 2px 8px 1px rgb(0,0,0,0.2);
+    /* box-shadow: 0px 2px 8px 1px rgb(0,0,0,0.2); */
     cursor: pointer;
 `;
 
@@ -64,6 +64,10 @@ export const DetailsContainerItemImage = styled.div`
     animation-name: heroic;
     animation-duration: 500ms;
     transition:500ms;
+    :hover{
+        width: 40vw;
+        height: 450px;        
+    }    
     @keyframes heroic{
     0%   {
         width: 35vw;
@@ -72,13 +76,9 @@ export const DetailsContainerItemImage = styled.div`
     100% {
         width: 43vw;
         height: 500px;
-    }
+      }
     }
 
-    :hover{
-        width: 33vw;
-        height: 380px;        
-    }
     @media all and (max-width:600px){
         width: 90vw;  
         @keyframes heroic{
@@ -92,7 +92,7 @@ export const DetailsContainerItemImage = styled.div`
       :hover{
         width: 80vw;       
     }
-    }
+  }
 `;
 
 

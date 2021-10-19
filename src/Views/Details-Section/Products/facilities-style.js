@@ -8,6 +8,7 @@ import Notestaking from "../../../assets/Testee/taking-notes-on-programming.jpg"
 import CrosPencils from "../../../assets/Testee/pexels-ann-h-1762851.jpg"
 import Approval from "../../../assets/approval.svg"
 import CardPayment from "../../../assets/card_payment.svg"
+import Packaging from "../../../assets/packaging.svg"
 
 export const FacilityHome = styled.div`
     // Added This To CONTROL POP SCROLLING BEHAVIOR
@@ -366,6 +367,11 @@ export const Listview = styled.div`
     max-height: 300px;
     width: 350px;
     overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */    
+    ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
     /* background-color: rgba(0,0,0,0.06); */
     margin: 8px 0px;
 
@@ -377,7 +383,8 @@ export const Listview = styled.div`
 export const PayButtonBody = styled.div`
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const PayButton = styled.div`
@@ -463,9 +470,33 @@ export const SubTotal = styled.div`
 `;
 
 
+
 export const PriceLabelSubTotal = styled.div`
     color: grey;
     font-size: 18px;
     font-weight: 500;
     margin-right: 20px;
 `;
+
+export const PriceTotal = styled.div`
+    color: grey;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+`;
+
+export const SentIconBody = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+export const SentIcon = styled.div`
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+    background-image: url('${Packaging}');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+`;
+

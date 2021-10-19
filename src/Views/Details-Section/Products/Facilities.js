@@ -1,6 +1,13 @@
 
 import React, { useState, } from 'react'
-import { AboutBackArrow, FacilityHome, AboutNavigation, HeaderImage, HeaderImageContainer, HeaderText, Text, TextContainer, SubItems, ItemCard, Picture, Price, ItemName, CounterBase, CounterLowerItem, CounterRow, ReduceCounter, AddToCounter, ShowCounterValue, CounterBaseRow, AddToCartButton, CartRevealer, CartRevealerButton, CartRevealerButtonImage, AddToCartButtonImage, PopUpCard, PopUpCardBody, Modal, Verified, CardContentBody, CheckoutLabel, CardContentBodyColumn, Listview, PayButtonBody, PayButton, CardPay, PurchasedItem, PurchasedItemImage, PurchasedItemDetailsColumn, ItemsDetailLabel, PriceLabel, PriceNQuantityLabel, QuantityLabel, SubTotal, PriceLabelSubTotal } from './facilities-style'
+import { AboutBackArrow, FacilityHome, AboutNavigation, HeaderImage, HeaderImageContainer, 
+    HeaderText, Text, TextContainer, SubItems, ItemCard, Picture, Price, ItemName, CounterBase,
+     CounterLowerItem, CounterRow, ReduceCounter, AddToCounter, ShowCounterValue, CounterBaseRow,
+      AddToCartButton, CartRevealer, CartRevealerButton, CartRevealerButtonImage, AddToCartButtonImage,
+       PopUpCard, PopUpCardBody, Modal, Verified, CardContentBody, CheckoutLabel, CardContentBodyColumn,
+     Listview, PayButtonBody, PayButton, CardPay, PurchasedItem, PurchasedItemImage, PurchasedItemDetailsColumn, 
+        ItemsDetailLabel, PriceLabel, PriceNQuantityLabel, QuantityLabel, SubTotal, PriceLabelSubTotal, PriceTotal, SentIconBody, SentIcon, 
+         } from './facilities-style'
 import { useHistory } from "react-router-dom";
 import { BottomGap } from '../Circle-ItemDetail/circle-item-details-style';
 
@@ -116,9 +123,14 @@ function FacilitiesHome() {
     ]);
 
     const [showDialog, setDialogState] = useState(false);
+    const [showSuccessDialog, setSuccessDialog] = useState(false);
 
     function showAndDismissDialog() {
         setDialogState(!showDialog)
+    }
+
+    function showAndDismissSuccessDialog() {
+        setSuccessDialog(!showSuccessDialog)
     }
     // Show The Counter for this item so I can Pick it    
     function showCounterAtIndex(index) {
@@ -150,6 +162,12 @@ function FacilitiesHome() {
         newArr[index]["selected"] = !newArr[index]["selected"];
         setItemsState(newArr);
     }
+
+    function removeCurrentAndShowNewDialog(){
+        showAndDismissDialog();
+        showAndDismissSuccessDialog();
+    }
+
 
     function giveImage(i) {
         switch (i) {
@@ -242,7 +260,7 @@ function FacilitiesHome() {
                 <Modal onClick={(e) => { showAndDismissDialog() }}>
                     {/* <PopUpBody onClick={(e)=>{showAndDismissDialog()}}> */}
                     <PopUpCardBody>
-                        <PopUpCard>
+                        <PopUpCard onClick={e => {e.stopPropagation();}}>
                             <CardContentBody>
                                 <CardContentBodyColumn>
                                     <Verified />
@@ -266,17 +284,35 @@ function FacilitiesHome() {
                                     </PurchasedItem>})}
                                         
                                     </Listview>
-                                     
-                                    <PayButtonBody>
                                         <PayButtonBody>
+                                            <PriceTotal> $ 96847</PriceTotal>
                                             <PayButton onClick={e => {
                                                 e.stopPropagation();
+                                                removeCurrentAndShowNewDialog();
                                             }}>
                                                 Pay
                                                 <CardPay />
                                             </PayButton>
                                         </PayButtonBody>
-                                    </PayButtonBody>
+                                </CardContentBodyColumn>
+                            </CardContentBody>
+                        </PopUpCard>
+                    </PopUpCardBody>
+                </Modal>
+                : <div style={{ width: "0px", height: "0px" }}></div>
+            }
+
+            {showSuccessDialog === true ?
+                <Modal onClick={(e) => { showAndDismissSuccessDialog() }}>
+                    {/* <PopUpBody onClick={(e)=>{showAndDismissDialog()}}> */}
+                    <PopUpCardBody>
+                        <PopUpCard onClick={e => {e.stopPropagation();}}>
+                            <CardContentBody>
+                                <CardContentBodyColumn>
+                                    <Verified />
+                                    <CheckoutLabel>Items Purchased Successfully</CheckoutLabel>
+                                    <SentIconBody>
+                                        <SentIcon/>                                    </SentIconBody>
                                 </CardContentBodyColumn>
                             </CardContentBody>
                         </PopUpCard>
