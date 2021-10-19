@@ -38,92 +38,94 @@ function FacilitiesHome() {
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":NJio,
 
-        },
-        {
+        },{
             "name": "Yinbirl",
             "price": 660.4,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":CrosPencils,
 
-        },
-        {
-            "name": "King Toast",
+        },{
+            "name": "Thingsy",
             "price": 71.5,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Q23,
 
-        },
-        {
-            "name": "Kwadcnt",
+        },{
+            "name": "Kwadant",
             "price": 234,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Stuff,
 
-        },
-        {
+        },{
             "name": "Chicken",
             "price": 4.34,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Q1,
 
-        },
-        {
-            "name": "Toaster",
+        },{
+            "name": "Roafer",
             "price": 24.34,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":NJio,
 
-        },
-        {
-            "name": "Yinbirl",
+        },{
+            "name": "Yerna",
             "price": 660.4,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Fdg,
 
-        },
-        {
-            "name": "King Toast",
+        },{
+            "name": "KToost",
             "price": 71.5,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Stuff,
 
-        },
-        {
+        },{
             "name": "Kwadcnt",
             "price": 234,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Jfh,
 
-        },
-        {
+        },{
             "name": "Chicken",
             "price": 4.34,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Q23,
 
-        },
-        {
+        },{
             "name": "Toaster",
             "price": 24.34,
             "quantity": 1,
             "openedState": false,
             "selected": false,
+            "image":Fdg,
 
         },
     ]);
 
     const [showDialog, setDialogState] = useState(false);
     const [showSuccessDialog, setSuccessDialog] = useState(false);
+    const [cart, setCart] = useState([]);
 
     function showAndDismissDialog() {
         setDialogState(!showDialog)
@@ -148,7 +150,6 @@ function FacilitiesHome() {
 
     // DECREMENT
     function decrementCounterAtIndex(index) {
-        console.log(index);
         var newArr = [...shopItems];
         if (newArr[index]["quantity"] > 1) {
             newArr[index]["quantity"] = newArr[index]["quantity"] - 1;
@@ -163,32 +164,33 @@ function FacilitiesHome() {
         setItemsState(newArr);
     }
 
+
+    // Get Items Into Cart
+    function getCartSelectedItems(){        
+        var selected = [];
+         shopItems.forEach((data,index)=>{
+            if(data["selected"] === true){
+                selected.push(data)
+            }
+        })
+        setCart(selected);
+    }
+
+    function calculateTotalPricing(){
+        var sum = 0.0;
+        cart.forEach((value)=>{
+            sum = sum + value['price'] * value['quantity']
+        })
+
+        return sum
+    }
+
     function removeCurrentAndShowNewDialog(){
         showAndDismissDialog();
         showAndDismissSuccessDialog();
     }
 
 
-    function giveImage(i) {
-        switch (i) {
-            case 1: return NJio;
-            case 2: return CrosPencils;
-            case 3: return Q23;
-            case 4: return Stuff;
-            case 5: return CrosPencils;
-            case 6: return Q1;
-            case 7: return NJio;
-            case 8: return Fdg;
-            case 9: return Stuff;
-            case 11: return Jfh;
-            case 12: return Q23;
-            case 13: return Fdg;
-            case 14: return Q1;
-            case 15: return Fdg;
-            case 16: return CrosPencils;
-            default: return Jfh;
-        }
-    }
 
     return (
         <FacilityHome>
@@ -206,7 +208,10 @@ function FacilitiesHome() {
             <SubItems>
                 <CartRevealer>
                     <CartRevealerButton
-                        onClick={(e) => { showAndDismissDialog() }}
+                        onClick={(e) => { 
+                            getCartSelectedItems();
+                            showAndDismissDialog();
+                         }}
                     >
                         <CartRevealerButtonImage>
                         </CartRevealerButtonImage>
@@ -218,7 +223,7 @@ function FacilitiesHome() {
                     {shopItems.map((item, index) => {
                         return <ItemCard key={index}>
                             <div>
-                                <Picture image={giveImage(index)} />
+                                <Picture image={shopItems[index]["image"]} />
                                 <Text>
                                     <Price>${shopItems[index]["price"]}</Price>
                                     <ItemName>{shopItems[index]["name"]}</ItemName>
@@ -263,36 +268,37 @@ function FacilitiesHome() {
                         <PopUpCard onClick={e => {e.stopPropagation();}}>
                             <CardContentBody>
                                 <CardContentBodyColumn>
-                                    <Verified />
-                                    <CheckoutLabel>Check Out</CheckoutLabel>
+                                    {/* <Verified /> */}
+                                    <div style={{height:"15px"}}/>
+                                    <CheckoutLabel>{cart.length >0?"Check Out":"No items. Add items to check out"}</CheckoutLabel>
                                     <Listview>
-                                    {shopItems.map((item, index) => {
-                                        return <PurchasedItem>
+                                    {cart.map((item, index) => {
+                                        return <PurchasedItem key={index}>
                                         <PurchasedItemImage />
                                         <PurchasedItemDetailsColumn>
                                             <ItemsDetailLabel>
-                                                Checken Roaster
+                                                {item["name"]}
                                             </ItemsDetailLabel>
                                             <PriceNQuantityLabel>
-                                                <PriceLabel>$ 2347.72</PriceLabel>
-                                                <QuantityLabel>(x2)</QuantityLabel>
+                                                <PriceLabel>${item["price"].toFixed(2)}</PriceLabel>
+                                                <QuantityLabel>(x{item["quantity"]})</QuantityLabel>
                                             </PriceNQuantityLabel>
                                             <SubTotal>
-                                                    <PriceLabelSubTotal>$78634</PriceLabelSubTotal>
+                                                    <PriceLabelSubTotal>${(item["price"] * item["quantity"]).toFixed(2)}</PriceLabelSubTotal>
                                                 </SubTotal>                                                
                                         </PurchasedItemDetailsColumn>
                                     </PurchasedItem>})}
                                         
                                     </Listview>
                                         <PayButtonBody>
-                                            <PriceTotal> $ 96847</PriceTotal>
-                                            <PayButton onClick={e => {
+                                            <PriceTotal> {cart.length >0?`$ ${calculateTotalPricing().toFixed(2)}`:""} </PriceTotal>
+                                           {calculateTotalPricing().toFixed(2).toString() !== "0.00"?  <PayButton onClick={e => {
                                                 e.stopPropagation();
                                                 removeCurrentAndShowNewDialog();
                                             }}>
                                                 Pay
                                                 <CardPay />
-                                            </PayButton>
+                                            </PayButton> :<div/>}
                                         </PayButtonBody>
                                 </CardContentBodyColumn>
                             </CardContentBody>
@@ -304,7 +310,6 @@ function FacilitiesHome() {
 
             {showSuccessDialog === true ?
                 <Modal onClick={(e) => { showAndDismissSuccessDialog() }}>
-                    {/* <PopUpBody onClick={(e)=>{showAndDismissDialog()}}> */}
                     <PopUpCardBody>
                         <PopUpCard onClick={e => {e.stopPropagation();}}>
                             <CardContentBody>

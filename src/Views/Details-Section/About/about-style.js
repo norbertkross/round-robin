@@ -69,6 +69,7 @@ export const SubText = styled.div`
     font-size: 24px;
     color: grey;
     font-weight: 400;
+    text-align:center;
 `;
 
 

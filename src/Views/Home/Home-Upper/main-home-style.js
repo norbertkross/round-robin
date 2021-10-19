@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../../../assets/EUgene@2x.png"
+import Logo from "../../../assets/BUYvely.png"
 import Zenly from "../../../assets/zenly.svg"
 import Zenly_Dark from "../../../assets/assets-dark/zenly.svg"
 import VideoCall from "../../../assets/video_call.svg"
