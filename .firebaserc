@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "wq-y5d2905jb"
+  },
+  "targets": {
+    "wq-y5d2905jb": {
+      "hosting": {
+        "tive_org_land": [
+          "tive-organisation"
+        ],
+        "round-robin": [
+          "wq-y5d2905jb"
+        ]
+      }
+    }
   }
 }
